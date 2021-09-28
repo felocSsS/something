@@ -1,0 +1,55 @@
+﻿<Window x:Class="disight.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:disight"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        MinWidth="800"
+        MinHeight="450"
+        Title="SberCloud" Height="1080" Width="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#343F48"
+              MouseDown="Grid_MouseDown">
+            <Button VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 26 0"
+                    Height="29"
+                    Width="29"
+                    Background="#CB6565"
+                    Content="X"
+                    Name="BtnClose"
+                    Click="BtnClose_Click"/>
+            <Button VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 73 0"
+                    Height="29"
+                    Width="29"
+                    Background="#C4C4C4"
+                    Content="[ ]"
+                    Name="BtnOpenFullWindow"
+                    Click="BtnOpenFullWindow_Click"/>
+            <Button VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 120   0"
+                    Height="29"
+                    Width="29"
+                    Background="#C4C4C4"
+                    Content="_"
+                    Name="BtnHideWindow"
+                    Click="BtnHideWindow_Click"/>
+            <Image Source="/FImages/logoSber.png"
+                   HorizontalAlignment="Left"
+                   Margin="32 0 0 0"/>
+        </Grid>
+        <Frame Name="Frm"
+               NavigationUIVisibility="Hidden"
+               Grid.Row="1"/>
+    </Grid>
+</Window>
